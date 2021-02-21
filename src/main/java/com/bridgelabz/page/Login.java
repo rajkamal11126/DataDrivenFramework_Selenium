@@ -2,10 +2,12 @@ package com.bridgelabz.page;
 
 import com.bridgelabz.base.Base;
 import com.bridgelabz.util.ReadData;
+import com.bridgelabz.util.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import java.io.IOException;
 
 public class Login extends Base {
 
@@ -20,11 +22,10 @@ public class Login extends Base {
     }
     private static final String EXCEL_PATH = "C:\\Users\\Rajkamal\\IdeaProjects\\DataDrivenFramework\\src\\test\\resources\\Data.xlsx";
 
-    public void LoginToApplication() throws InterruptedException {
+    public void LoginToApplication() throws InterruptedException, IOException {
 
-        String username = ReadData.getCellValue(EXCEL_PATH, "Data", 1, 0);
-        String password = ReadData.getCellValue(EXCEL_PATH, "Data", 1, 1);
-
+        String username = Utility.readDataToExcel(EXCEL_PATH, "Data", 1, 0);
+        String password = Utility.readDataToExcel(EXCEL_PATH, "Data", 1, 1);
         userName.sendKeys(username);
         Thread.sleep(1000);
         Password.sendKeys(password);
