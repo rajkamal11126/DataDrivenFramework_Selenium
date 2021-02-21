@@ -1,7 +1,6 @@
 package com.bridgelabz.page;
 
 import com.bridgelabz.base.Base;
-import com.bridgelabz.util.ReadData;
 import com.bridgelabz.util.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

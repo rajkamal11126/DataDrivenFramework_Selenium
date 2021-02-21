@@ -13,7 +13,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import java.io.IOException;
-
 import static com.bridgelabz.util.Utility.capture;
 
 public class LinkedInTest extends Base {
