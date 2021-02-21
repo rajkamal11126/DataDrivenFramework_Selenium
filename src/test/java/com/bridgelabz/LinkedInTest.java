@@ -14,6 +14,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import java.io.IOException;
 
+import static com.bridgelabz.util.Utility.capture;
+
 public class LinkedInTest extends Base {
 
     @Test
@@ -23,5 +25,7 @@ public class LinkedInTest extends Base {
         Utility.writeDataToExcel();
         test = report.startTest("Logging into Application");
         test.log(LogStatus.PASS, "Test Passes");
+        test.log(LogStatus.PASS,test.addScreenCapture(capture(driver))+"TestPass");
+        capture(driver);
     }
 }
